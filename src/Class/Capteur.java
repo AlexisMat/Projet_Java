@@ -5,13 +5,99 @@
  */
 package Class;
 
+import java.sql.Time;
+import java.util.Date;
+
 /**
  *
  * @author Quentin
+ * La classe Capteur est abstract car il ne peut avoir que soit un capteur interieur ou exterieur.Le capteur seul est un concept
  */
-public class Capteur {
+public abstract class  Capteur {
+
+    public String getUniteDeMesure() {
+        return uniteDeMesure;
+    }
+
+    public void setUniteDeMesure(String uniteDeMesure) {
+        this.uniteDeMesure = uniteDeMesure;
+    }
+
+    public String getIdentifant() {
+        return Identifant;
+    }
+
+    public void setIdentifant(String Identifant) {
+        this.Identifant = Identifant;
+    }
+
+    public Intervalle getI() {
+        return i;
+    }
+
+    public void setI(Intervalle i) {
+        this.i = i;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getT() {
+        return t;
+    }
+
+    public void setT(String t) {
+        this.t = t;
+    }
+
+    public float getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(float precision) {
+        this.precision = precision;
+    }
+
+    public float getMarge() {
+        return marge;
+    }
+
+    public void setMarge(float marge) {
+        this.marge = marge;
+    }
+
+    public Integer getFrequence() {
+        return frequence;
+    }
+
+    public void setFrequence(Integer frequence) {
+        this.frequence = frequence;
+    }
+
+    public Capteur(String uniteDeMesure, String Identifant, Intervalle i, String date, String t, float precision, float marge, Integer frequence) {
+        this.uniteDeMesure = uniteDeMesure;
+        this.Identifant = Identifant;
+        this.i = i;
+        this.date = date;
+        this.t = t;
+        this.precision = precision;
+        this.marge = marge;
+        this.frequence = frequence;
+    }
     
     private String uniteDeMesure,Identifant;
-   
+    private Intervalle i;
+    private String  date; // Sous fome jj/mm/aaaa  peut etre faire des classe pour date et heure
+    private String t; // sous forme hh:mm
+    private float precision;
+    private float marge ;
+    private Integer frequence;
+    
+    
     
 }

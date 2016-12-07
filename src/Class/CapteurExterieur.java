@@ -11,10 +11,6 @@ package Class;
  */
 public class CapteurExterieur extends Capteur {
 
-    public void setLocalisation(String Localisation) {
-        this.Localisation = Localisation;
-    }
-
     public String getLocalisation() {
         return Localisation;
     }

@@ -9,12 +9,11 @@ package Class;
  *
  * @author Quentin
  */
-public class Test {
-    
-    public static void main ()
-    {
-        Intervalle i = new Intervalle(15.5f,28.6f);
-                
-     System.out.println (i);
+public class GPS {
+
+    public GPS() {
     }
+    
+    public Intervalle latitutude =  new Intervalle(-90.0f,90.0f);
+    public Intervalle longitutude = new Intervalle(-180.0f,180.f);
 }

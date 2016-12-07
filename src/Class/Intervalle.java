@@ -25,14 +25,25 @@ public class Intervalle {
         this.borneSup =b;
     }
     
-    private float GenerateValue ()
+    public float GenerateValue ()
     {
         Random rand = new Random();
 
-         return (rand.nextFloat() * (this.borneSup - this.borneInf) + this.borneInf);
+         float i =(rand.nextFloat() * (this.borneSup - this.borneInf) + this.borneInf);
+         
+         
+         return i;
 
     }
     
+    private float getborneInf ()
+    {
+        return borneInf;
+    }
+    private float getborneSUp ()
+    {
+        return borneSup;
+    }
    
 }
 
