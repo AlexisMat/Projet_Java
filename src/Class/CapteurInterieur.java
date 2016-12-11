@@ -11,18 +11,18 @@ package Class;
  */
 public class CapteurInterieur extends Capteur {
 
-    public GPS getLocalisation() {
+    public String getLocalisation() {
         return localisation;
     }
 
-    public void setLocalisation(GPS localisation) {
+    public void setLocalisation(String localisation) {
         this.localisation = localisation;
     }
-    private GPS localisation;
+    private String localisation;
     
-    public CapteurInterieur(GPS gps,String uniteDeMesure, String Identifant, Intervalle i, String date, String t, float precision, float marge, Integer frequence) {
-        super(uniteDeMesure, Identifant, i, date, t, precision, marge, frequence);
-        this.localisation = gps;
+    public CapteurInterieur(String localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
+        super(uniteDeMesure, Identifant, i, date, precision, marge, frequence);
+        this.localisation = localisation;
     }
     
 }
