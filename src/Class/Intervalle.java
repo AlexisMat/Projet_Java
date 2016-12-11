@@ -15,6 +15,27 @@ import java.util.Random;
 
 
 public class Intervalle {
+
+    public float getBorneInf() {
+        return borneInf;
+    }
+
+    public void setBorneInf(float borneInf) {
+        this.borneInf = borneInf;
+    }
+
+    public float getBorneSup() {
+        return borneSup;
+    }
+
+    public void setBorneSup(float borneSup) {
+        this.borneSup = borneSup;
+    }
+
+    @Override
+    public String toString() {
+        return borneInf + "et" + borneSup ;
+    }
     
     private float borneInf ;
     private float  borneSup;
@@ -25,7 +46,7 @@ public class Intervalle {
         this.borneSup =b;
     }
     
-    public float GenerateValue ()
+    public float GenerateValue () //Retourne une valleur aleatoire compris dans l'intervalle
     {
         Random rand = new Random();
 
@@ -35,6 +56,13 @@ public class Intervalle {
          return i;
 
     }
+    
+    public boolean appartient (float val) //Dit si une valeur appartient a l'intervalle
+    {
+        return (val > borneInf && val < borneSup);
+            
+    }
+        
     
     private float getborneInf ()
     {
