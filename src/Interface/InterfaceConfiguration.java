@@ -99,7 +99,6 @@ public class InterfaceConfiguration extends javax.swing.JFrame {
         // TODO add your handling code here:
      String addr =  adrIp.getText();
      int port = Integer.valueOf(numPort.getText());
-      System.out.println("AdresseIP : "+addr+"\nPort : " +port);
       this.dispose();
     }//GEN-LAST:event_ValiderConfigActionPerformed
 

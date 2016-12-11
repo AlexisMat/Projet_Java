@@ -96,7 +96,7 @@ public class InterfaceSimulation extends javax.swing.JFrame {
                    
             }		
                catch (Exception e){
-                  System.out.println(e.toString());
+                 e.printStackTrace();
              
                }
       
@@ -525,7 +525,7 @@ public class InterfaceSimulation extends javax.swing.JFrame {
 
         jMenu1.setText("Se Connecter");
 
-        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.setText("Configuration");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -1212,7 +1212,6 @@ public class InterfaceSimulation extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        System.out.println("identifiant"+this.capteur.getIdentifant());
         if( this.capteur != null)
         {
             valeur.setText(this.capteur.getI().GenerateValue()+"");
@@ -1242,7 +1241,8 @@ public class InterfaceSimulation extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        new InterfaceConfiguration().setVisible(true);
+         InterfaceConfiguration config = new InterfaceConfiguration();
+         config.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
