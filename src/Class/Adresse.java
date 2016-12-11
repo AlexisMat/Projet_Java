@@ -22,7 +22,6 @@ public class Adresse {
         this.port = port;
     }
 
-        
     public String getIp() {
         return ip;
     }
@@ -31,4 +30,8 @@ public class Adresse {
         return port;
     }
    
+    public Adresse(){
+        this.ip = ip;
+        this.port =port;
+    }
 }
