@@ -17,12 +17,27 @@ import java.net.UnknownHostException;
  */
 public class Réseau {
     
+    private Capteur capteur;
+    private Adresse adresse;
+    
+    public Réseau (Capteur capteur){
+        this.capteur = capteur;
+        this.adresse = adresse;
+}
+    
     public void Connexion()throws UnknownHostException, IOException
     {
-          String testCo = new String("ConnexionCapteur;radiateur;Température;U3;2;204;pas loin de la porte");//ConnexionCapteur;IdentifiantCapteur;TypeCapteur;Bâtiment;Etage;Salle;PositionRelative
-          
+            String testCo = null;
+        if(capteur instanceof CapteurInterieur){
+           CapteurInterieur captInt = (CapteurInterieur) this.capteur;
+           testCo = new String("ConnexionCapteur;"+captInt.getIdentifant()+";"+captInt.getType()+";"+captInt.getLocalisation());//ConnexionCapteur;IdentifiantCapteur;TypeCapteur;Bâtiment;Etage;Salle;PositionRelative
+        }else if(capteur instanceof CapteurExterieur){
+            CapteurExterieur captExt = (CapteurExterieur) this.capteur;
+            testCo = new String("ConnexionCapteur;"+captExt.getIdentifant()+";"+captExt.getType()+";"+captExt.getLocalisation());//ConnexionCapteur;Id;type;coordLat;coordLong
+                    
+        }
           try{
-                Socket client = new Socket(InetAddress.getLocalHost(),7888);
+                Socket client = new Socket(InetAddress.getLocalHost(),adresse.getPort());
                 System.out.println("Demande de connexion");
                 
                 OutputStream co =  client.getOutputStream();
@@ -36,10 +51,10 @@ public class Réseau {
     }
     
     public void Deconnexion() throws UnknownHostException, IOException{
-         String testDeco = new String("DeconnexionCapteur;radiateur");//DeconnexionCapteur;IdentifiantCapteur
+         String testDeco = new String("DeconnexionCapteur;"+capteur.getIdentifant());//DeconnexionCapteur;IdentifiantCapteur
          
          try{
-             Socket  client =  new Socket(InetAddress.getLocalHost(),7888);
+             Socket  client =  new Socket(InetAddress.getLocalHost(),adresse.getPort());
              System.out.println("Demande de déconnexion");
              
              OutputStream deco =  client.getOutputStream();
