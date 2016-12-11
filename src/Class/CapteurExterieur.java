@@ -11,13 +11,13 @@ package Class;
  */
 public class CapteurExterieur extends Capteur {
 
-    public String getLocalisation() {
+    public GPS getLocalisation() {
         return Localisation;
     }
-    private String Localisation; // A recuopere dans un fichier
+    private GPS Localisation; // A recuopere dans un fichier
     
-    public CapteurExterieur(String localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, String t, float precision, float marge, Integer frequence) {
-        super(uniteDeMesure, Identifant, i, date, t, precision, marge, frequence);
+    public CapteurExterieur(GPS localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
+        super(uniteDeMesure, Identifant, i, date, precision, marge, frequence);
         this.Localisation = localisation;
     }
     
