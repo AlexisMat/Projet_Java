@@ -47,14 +47,6 @@ public abstract class  Capteur {
         this.date = date;
     }
 
-    public String getT() {
-        return t;
-    }
-
-    public void setT(String t) {
-        this.t = t;
-    }
-
     public float getPrecision() {
         return precision;
     }
@@ -79,12 +71,11 @@ public abstract class  Capteur {
         this.frequence = frequence;
     }
 
-    public Capteur(String uniteDeMesure, String Identifant, Intervalle i, String date, String t, float precision, float marge, Integer frequence) {
+    public Capteur(String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
         this.uniteDeMesure = uniteDeMesure;
         this.Identifant = Identifant;
         this.i = i;
         this.date = date;
-        this.t = t;
         this.precision = precision;
         this.marge = marge;
         this.frequence = frequence;
@@ -93,7 +84,6 @@ public abstract class  Capteur {
     private String uniteDeMesure,Identifant;
     private Intervalle i;
     private String  date; // Sous fome jj/mm/aaaa  peut etre faire des classe pour date et heure
-    private String t; // sous forme hh:mm
     private float precision;
     private float marge ;
     private Integer frequence;
