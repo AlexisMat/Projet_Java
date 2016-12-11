@@ -31,7 +31,7 @@ public class Main  {
             Map<String,InfoLog>register = new HashMap<>();
                 
             try{
-                    InputStream flux=new FileInputStream("C:\\Users\\Quentin\\Documents\\NetBeansProjects\\Projet_Java\\src\\Interface\\LogIn.txt"); 
+                    InputStream flux=new FileInputStream(".\\ressource\\LogIn.txt"); 
                     InputStreamReader lecture=new InputStreamReader(flux);
                     BufferedReader buff=new BufferedReader(lecture);
                     String ligne;
