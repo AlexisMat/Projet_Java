@@ -11,9 +11,15 @@ package Class;
  */
 public class GPS {
 
-    public GPS() {
+    public GPS(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
+
+    int x;
+    int y;
     
-    public Intervalle latitutude =  new Intervalle(-90.0f,90.0f);
-    public Intervalle longitutude = new Intervalle(-180.0f,180.f);
+    
+    
+   
 }
