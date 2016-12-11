@@ -16,8 +16,8 @@ public class CapteurExterieur extends Capteur {
     }
     private GPS Localisation; // A recuopere dans un fichier
     
-    public CapteurExterieur(GPS localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
-        super(uniteDeMesure, Identifant, i, date, precision, marge, frequence);
+    public CapteurExterieur(String type,GPS localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
+        super(type,uniteDeMesure, Identifant, i, date, precision, marge, frequence);
         this.Localisation = localisation;
     }
     

@@ -71,7 +71,7 @@ public abstract class  Capteur {
         this.frequence = frequence;
     }
 
-    public Capteur(String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
+    public Capteur(String type ,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
         this.uniteDeMesure = uniteDeMesure;
         this.Identifant = Identifant;
         this.i = i;
@@ -79,6 +79,7 @@ public abstract class  Capteur {
         this.precision = precision;
         this.marge = marge;
         this.frequence = frequence;
+        this.type = type;
     }
     
     private String uniteDeMesure,Identifant;
@@ -87,6 +88,15 @@ public abstract class  Capteur {
     private float precision;
     private float marge ;
     private Integer frequence;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
     
     
     

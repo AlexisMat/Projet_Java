@@ -20,8 +20,8 @@ public class CapteurInterieur extends Capteur {
     }
     private String localisation;
     
-    public CapteurInterieur(String localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
-        super(uniteDeMesure, Identifant, i, date, precision, marge, frequence);
+    public CapteurInterieur(String type ,String localisation,String uniteDeMesure, String Identifant, Intervalle i, String date, float precision, float marge, Integer frequence) {
+        super(type,uniteDeMesure, Identifant, i, date, precision, marge, frequence);
         this.localisation = localisation;
     }
     
